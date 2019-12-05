@@ -151,7 +151,47 @@
 @section('content')
 
     <div class="container">
-        <h2>This is trainingstaff main index!</h2>
 
+        <form action="/search" method="get" role="search">
+            {{ csrf_field() }}
+            <div class="main">
+                <div class="input-group">
+                    <input type="search" class="form-control" name="search" placeholder="Search users">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="table">
+            <table class="table table-hover table-striped table-fixed text-center">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                    <th></th>
+                </tr>
+                @foreach($users as $user)
+                    <tr class = "text-center">
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->role }}</td>
+
+                        <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>
+                    </tr>
+                @endforeach
+            </table>
+
+
+        </div>
+
+    </div>
 
 @endsection

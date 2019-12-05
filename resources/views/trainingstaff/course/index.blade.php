@@ -151,7 +151,49 @@
 @section('content')
 
     <div class="container">
-        <h2>This is trainingstaff main index!</h2>
 
+        <form action="/search" method="get" role="search">
+            {{ csrf_field() }}
+            <div class="main">
+                <div class="input-group">
+                    <input type="search" class="form-control" name="search" placeholder="Search courses">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="table">
+            <table class="table table-hover table-striped table-fixed text-center">
+                <tr>
+                    <th>CourseID</th>
+                    <th>Course Name</th>
+                    <th>Course Category</th>
+
+                    <th></th>
+                    <th>Action</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach($courses as $course)
+                    <tr class = "text-center">
+                        <td>{{ $course->CourseID }}</td>
+                        <td>{{ $course->CourseName }}</td>
+                        <td>{{ $course->CourseCategoryName }}</td>
+                        <td><a href="#" class = "btn btn-dark">Details</a></td>
+                        <td><a href="#" class = "btn btn-secondary">Add topics</a></td>
+                        <td><a href="#" class = "btn btn-info">Edit</a></td>
+                        <td><a href="#" class = "btn btn-danger">Delete</a></td>
+                        </tr>
+                @endforeach
+            </table>
+
+
+        </div>
+
+    </div>
 
 @endsection

@@ -85,7 +85,6 @@
 <body>
 <br>
 <div class="sidenav">
-
     <button class="dropdown-btn">Course
         <i class="fa fa-caret-down"></i>
     </button>
@@ -149,9 +148,39 @@
 
 
 @section('content')
-
     <div class="container">
-        <h2>This is trainingstaff main index!</h2>
+        <h2>Create new account</h2>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-8 offset-sm-2">
 
+            <form action="{{route('admin.store')}}" method = "post">
+                @csrf
+                <div class="form-group">
+                    <label for="name">Username:</label>
+                    <input type="text" name = "name" id = "name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Email:</label>
+                    <input type="email" name = "email" id = "email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Password:</label>
+                    <input type="password" name = "password" id = "password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select name="role" id="role" class="form-control" required>
+                        <option value="">Select Role</option>
+                        <option value="1">Administrator</option>
+                        <option value="2">Training Staff</option>
+                        <option value="3">Trainer</option>
+                        <option value="4">Trainee</option>
+                    </select>
+                </div>
+                <button type = "submit" class = "btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
 
 @endsection
