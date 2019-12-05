@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Topic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TraineeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TraineeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrainerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrainerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Trainee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Trainee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Trainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Trainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,19 +139,19 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\testauth\testAuth\app\Http\Controllers" />
-      <recent name="E:\testauth\testAuth\app" />
-      <recent name="E:\testauth\testAuth\app\Http" />
-      <recent name="E:\testauth\testAuth\resources\views\trainingstaff" />
-      <recent name="E:\testauth\testAuth\resources\views\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\testauth\testAuth\app\Http\Controllers" />
       <recent name="E:\testauth\testAuth\public\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\testauth\testAuth\app" />
+      <recent name="E:\testauth\testAuth\app\Http\Controllers" />
+      <recent name="E:\testauth\testAuth\app\Http" />
+      <recent name="E:\testauth\testAuth\resources\views\trainingstaff" />
+      <recent name="E:\testauth\testAuth\resources\views\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -164,7 +188,7 @@
       <workItem from="1575459798550" duration="12492000" />
       <workItem from="1575473240823" duration="955000" />
       <workItem from="1575509032353" duration="23420000" />
-      <workItem from="1575543736768" duration="387000" />
+      <workItem from="1575543736768" duration="16207000" />
     </task>
     <task id="LOCAL-00001" summary="create training staff routes (done create course)">
       <created>1575540190979</created>
@@ -173,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575540190979</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create training staff routes (done create course)">
+      <created>1575544135519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575544135520</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

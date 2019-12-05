@@ -149,33 +149,29 @@
 
 @section('content')
     <div class="container">
-        <h2>Create new account</h2>
+        <h2>Create new topic</h2>
     </div>
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
 
-            <form action="{{route('admin.store')}}" method = "post">
+            <form action="{{route('topic.store')}}" method = "post">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Username:</label>
+                    <label for="name">Topic Name:</label>
                     <input type="text" name = "name" id = "name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="lastname">Email:</label>
-                    <input type="email" name = "email" id = "email" class="form-control" required>
+                    <label for="lastname">Topic Description:</label>
+                    <input type="text" name = "description" id = "description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="department">Password:</label>
-                    <input type="password" name = "password" id = "password" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="role">Role:</label>
-                    <select name="role" id="role" class="form-control" required>
-                        <option value="">Select Role</option>
-                        <option value="1">Administrator</option>
-                        <option value="2">Training Staff</option>
-                        <option value="3">Trainer</option>
-                        <option value="4">Trainee</option>
+                    <label for="role">Trainer:</label>
+                    <select name="trainer" id="trainer" class="form-control" required>
+                        @foreach($trainers as $trainer)
+
+                            <option value="{{$trainer->id}}">{{$trainer->TrainerName}}</option>
+
+                        @endforeach
                     </select>
                 </div>
                 <button type = "submit" class = "btn btn-success">Submit</button>

@@ -156,7 +156,7 @@
             {{ csrf_field() }}
             <div class="main">
                 <div class="input-group">
-                    <input type="search" class="form-control" name="search" placeholder="Search users">
+                    <input type="search" class="form-control" name="search" placeholder="Search trainees">
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="submit">
                             <i class="fa fa-search"></i>
@@ -169,22 +169,23 @@
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>Trainee ID</th>
+                    <th>Trainee Name</th>
+                    <th>Trainee Email</th>
+                    <th>Trainee Phone</th>
+                    <th>System Email</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
-                @foreach($users as $user)
+                @foreach($trainees as $trainee)
                     <tr class = "text-center">
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
-
-                        <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>
+                        <td>{{ $trainee->id }}</td>
+                        <td>{{ $trainee->TraineeName }}</td>
+                        <td>{{ $trainee->TraineeEmail }}</td>
+                        <td>{{ $trainee->TraineePhone }}</td>
+                        <td>{{ $trainee->SystemEmail }}</td>
+                        <td><a href="{{route('trainee.edit',['id'=>$trainee->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('trainee.destroy',['id'=>$trainee->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </table>

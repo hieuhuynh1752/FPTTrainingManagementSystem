@@ -4,18 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
     public function index(){
         //$courses = Course::with('coursecategories')->get();
-        $courses = DB::table('courses')->orderBy('courseid')->get();
-        $categories = DB::table('course_categories')->orderBy('coursecategoryid')->get();
+        $courses = DB::table('courses')->orderBy('id')->get();
+        $categories = DB::table('course_categories')->orderBy('id')->get();
         foreach ($courses as $course){
             foreach ($categories as $category){
-                if($course->CourseCategoryID==$category->CourseCategoryID){
+                if($course->CourseCategoryID==$category->id){
                     $course->CourseCategoryName=$category->CourseCategoryName;
                 }
             }
@@ -25,7 +24,7 @@ class CourseController extends Controller
 
     public function create(){
 
-        $categories = DB::table('course_categories')->orderBy('coursecategoryid')->get();
+        $categories = DB::table('course_categories')->orderBy('id')->get();
 
         return view('trainingstaff.course.create')->with([
             'categories'=>$categories
@@ -45,40 +44,48 @@ class CourseController extends Controller
 
 
         $course->save(); //persist the data
-        return redirect()->route('trainingstaff.course.index')->with('info', 'Course Added Successfully');
+        return redirect()->route('course.index')->with('info', 'Course Added Successfully');
     }
 
     public function edit($id)
     {
-        $course = DB::table('course')->where('CourseID',$id);
-        return view('trainingstaff.course.edit',['course'=>$course]);
+        $course = DB::table('courses')->where('id',$id)->first();
+        $categories = DB::table('course_categories')->orderBy('id')->get();
+        return view('trainingstaff.course.edit',['course'=>$course,'categories'=>$categories]);
     }
 
     public function update(Request $request)
     {
         //Retrieve the employee and update
-        $user = User::findOrFail($request->input('id'));
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $temppassword = $request->input('password');
-        $user->password = Hash::make($temppassword);
-        $user->role = $request->input('role');
-        $user->save(); //persist the data
-        return redirect()->route('admin.index')->with('info','User Updated Successfully');
+        $course = Course::findOrFail($request->input('id'));
+        //$course = Course::where('CourseID', $request->input('id'))->first();
+        $course->CourseCategoryID = $request->input('category');
+        $course->CourseName = $request->input('name');
+        $course->CourseDescription = $request->input('description');
+
+        $course->save(); //persist the data
+        return redirect()->route('course.index')->with('info','Course Updated Successfully');
     }
 
     public function search(Request $request){
         $search =$request->get('search');
-        $users = DB::table('users')->where('name','like','%'.$search.'%')->get();
+        $courses = DB::table('courses')->where('CourseName','like','%'.$search.'%')->get();
+        $categories = DB::table('course_categories')->orderBy('id')->get();
+        foreach ($courses as $course){
+            foreach ($categories as $category){
+                if($course->id==$category->id){
+                    $course->CourseCategoryName=$category->CourseCategoryName;
+                }
+            }
+        }
 
-
-        return view('admin.index',['users'=>$users]);
+        return view('trainingstaff.course.index',['courses'=>$courses]);
     }
 
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->route('admin.index');
+        $course = Course::findOrFail($id);
+        $course->delete();
+        return redirect()->route('course.index');
     }
 }

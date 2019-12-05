@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Trainer extends Model
+class Topic extends Model
 {
     protected $fillable = [
-        'userid','trainername','trainertype','traineremail','traineephone'
+        'trainerid','topicname','topicdescription'
     ];
 }

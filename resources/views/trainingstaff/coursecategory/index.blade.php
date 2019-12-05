@@ -156,7 +156,7 @@
             {{ csrf_field() }}
             <div class="main">
                 <div class="input-group">
-                    <input type="search" class="form-control" name="search" placeholder="Search users">
+                    <input type="search" class="form-control" name="search" placeholder="Search Course Category">
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="submit">
                             <i class="fa fa-search"></i>
@@ -169,22 +169,22 @@
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>Course Category ID</th>
+                    <th>Course Category Name</th>
+                    <th>Course Category Description</th>
+
                     <th>Action</th>
                     <th></th>
                 </tr>
-                @foreach($users as $user)
+                @foreach($categories as $category)
                     <tr class = "text-center">
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
+                        <td>{{ $category->id }}</td>
+                        <td>{{ $category->CourseCategoryName }}</td>
+                        <td>{{ $category->CourseCategoryDescription }}</td>
 
-                        <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>
+
+                        <td><a href="{{route('coursecategory.edit',['id'=>$category->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('coursecategory.destroy',['id'=>$category->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </table>

@@ -154,29 +154,36 @@
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
 
-            <form action="{{route('admin.store')}}" method = "post">
+            <form action="{{route('trainee.store')}}" method = "post">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Username:</label>
+                    <label for="role">System Email:</label>
+                    <select name="user" id="user" class="form-control" required>
+                        @foreach($users as $user)
+                            <option value="{{$user->id}}">{{$user->email}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Trainee Name:</label>
                     <input type="text" name = "name" id = "name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="lastname">Email:</label>
+                    <label for="name">Trainee Date of Birth:</label>
+                    <input type="date" name = "dob" id = "dob" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Trainee Email:</label>
                     <input type="email" name = "email" id = "email" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="department">Password:</label>
-                    <input type="password" name = "password" id = "password" class="form-control" required>
+                    <label for="name">Trainee Education:</label>
+                    <input type="text" name = "education" id = "education" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="role">Role:</label>
-                    <select name="role" id="role" class="form-control" required>
-                        <option value="">Select Role</option>
-                        <option value="1">Administrator</option>
-                        <option value="2">Training Staff</option>
-                        <option value="3">Trainer</option>
-                        <option value="4">Trainee</option>
-                    </select>
+                    <label for="name">Trainer Phone:</label>
+                    <input type="text" name = "phone" id = "phone" class="form-control" required>
                 </div>
                 <button type = "submit" class = "btn btn-success">Submit</button>
             </form>

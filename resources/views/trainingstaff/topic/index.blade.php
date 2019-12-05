@@ -169,22 +169,22 @@
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>Topic ID</th>
+                    <th>Topic Name</th>
+                    <th>Trainer</th>
+                    <th>Topic Description</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
-                @foreach($users as $user)
+                @foreach($topics as $topic)
                     <tr class = "text-center">
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
+                        <td>{{ $topic->id }}</td>
+                        <td>{{ $topic->TopicName }}</td>
+                        <td>{{ $topic->TrainerName }}</td>
+                        <td>{{ $topic->TopicDescription }}</td>
 
-                        <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>
+                        <td><a href="{{route('topic.edit',['id'=>$topic->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('topic.destroy',['id'=>$topic->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </table>

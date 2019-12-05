@@ -149,12 +149,12 @@
 
 @section('content')
     <div class="container">
-        <h2>Create new account</h2>
+        <h2>Create new course</h2>
     </div>
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
 
-            <form action="{{route('course.store')}}" method = "post">
+            <form action="{{route('trainer.store')}}" method = "post">
                 @csrf
                 <div class="form-group">
                     <label for="name">Course name:</label>
@@ -169,7 +169,7 @@
                     <select name="category" id="category" class="form-control" required>
                     @foreach($categories as $category)
 
-                        <option value="{{$category->CourseCategoryID}}">{{$category->CourseCategoryName}}</option>
+                        <option value="{{$category->id}}">{{$category->CourseCategoryName}}</option>
 
                         @endforeach
                     </select>

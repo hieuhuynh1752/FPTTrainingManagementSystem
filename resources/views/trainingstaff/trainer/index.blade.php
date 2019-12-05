@@ -169,22 +169,23 @@
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>Trainer ID</th>
+                    <th>Trainer Name</th>
+                    <th>Trainer Email</th>
+                    <th>Trainer Phone</th>
+                    <th>System Email</th>
                     <th>Action</th>
                     <th></th>
                 </tr>
-                @foreach($users as $user)
+                @foreach($trainers as $trainer)
                     <tr class = "text-center">
-                        <td>{{ $user->id }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
-
-                        <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>
+                        <td>{{ $trainer->id }}</td>
+                        <td>{{ $trainer->TrainerName }}</td>
+                        <td>{{ $trainer->TrainerEmail }}</td>
+                        <td>{{ $trainer->TrainerPhone }}</td>
+                        <td>{{ $trainer->SystemEmail }}</td>
+                        <td><a href="{{route('trainer.edit',['id'=>$trainer->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('trainer.destroy',['id'=>$trainer->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </table>
