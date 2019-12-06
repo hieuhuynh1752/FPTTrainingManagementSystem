@@ -127,7 +127,10 @@ class CourseController extends Controller
     public function assign($id){
         $course = DB::table('courses')->where('id',$id)->first();
         $name = $course->CourseName;
-        $topics = DB::table('topics')->orderBy('id')->get();
+        $topics = DB::table('course_details')
+                    ->join('topics',function($join) use ($id) {
+                        $join->on('topics.id','<>','course_details.TopicID')->where('course_details.CourseID','=',$id);
+                    })->get();
         $trainers = DB::table('trainers')->orderBy('id')->get();
         foreach ($topics as $topic){
             foreach ($trainers as $trainer){
@@ -147,6 +150,7 @@ class CourseController extends Controller
             $assign->TopicID = $topicitem;
             $assign->save();
         }
-        return view('trainingstaff.index');
+        //return view('trainingstaff.index');
+        $this->detail($request->input('id'));
     }
 }
