@@ -30,7 +30,7 @@ class CourseCategoryController extends Controller
         //input method is used to get the value of input with its
         //name specified
         $category->CourseCategoryName =$request->input('name');
-        $category->CourseDescription = $request->input('description');
+        $category->CourseCategoryDescription = $request->input('description');
 
 
         $category->save(); //persist the data

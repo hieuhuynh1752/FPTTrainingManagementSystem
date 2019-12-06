@@ -187,7 +187,7 @@
                         <td>{{ $course->id }}</td>
                         <td>{{ $course->CourseName }}</td>
                         <td>{{ $course->CourseCategoryName }}</td>
-                        <td><a href="#" class = "btn btn-dark">Details</a></td>
+                        <td><a href="{{route('course.detail',['id'=>$course->id])}}" class = "btn btn-dark">Details</a></td>
                         <td><a href="#" class = "btn btn-secondary">Add topics</a></td>
                         <td><a href="{{route('course.edit',['id'=>$course->id])}}" class = "btn btn-info">Edit</a></td>
                         <td><a href="{{route('course.destroy',['id'=>$course->id])}}" class = "btn btn-danger">Delete</a></td>

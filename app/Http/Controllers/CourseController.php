@@ -91,14 +91,32 @@ class CourseController extends Controller
 
 
     public function detail($id){
-        $info = DB::table('courses')->where('id',$id)->first();
+        $courses = DB::table('courses')->where('id',$id)->get();
+        $categories = DB::table('course_categories')->orderBy('id')->get();
+        foreach ($courses as $course){
+            foreach ($categories as $category){
+                if($course->CourseCategoryID==$category->id){
+                    $course->CourseCategoryName=$category->CourseCategoryName;
+                }
+            }
+        }
         $topics = DB::table('coursedetails')->where('courseid',$id)->get();
-        return view('trainingstaff.course.detail',['info'=>$info,'topics'=>$topics]);
+        $trainers = DB::table('trainers')->orderBy('id')->get();
+        foreach ($topics as $topic){
+            foreach ($trainers as $trainer){
+                if($topic->TrainerID==$trainer->id){
+                    $topic->TrainerName=$trainer->TrainerName;
+                }
+            }
+        }
+
+        return view('trainingstaff.course.detail',['courses' =>$courses,'topics'=>$topics]);
     }
 
     public function assign($id){
         $topics = DB::table('topics')->orderBy('id')->get();
-        return view('trainingstaff.course.assign',['courseid'=>$id,'topics'=>$topics]);
+        $trainers = DB::table('trainers')->orderBy('id')->get();
+        return view('trainingstaff.course.assign',['courseid'=>$id,'topics'=>$topics,'trainers'=>$trainers]);
     }
 
     public function assigntopic(Request $request){
