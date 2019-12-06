@@ -156,63 +156,32 @@
 @section('content')
 
     <div class="container">
+        <h2>Assign trainee {{$name}} to course:</h2>
 
-            @foreach($courses as $course)
-                <h2>{{$course->CourseName}} course details:</h2>
-            <ul>
-                <li><b>Course Category</b>: {{ $course->CourseCategoryName }}</li>
-                <li><b>Course Description</b>: {{ $course->CourseDescription }}</li>
-            </ul>
-                @endforeach
-
-
-
-        <h2>Course Topic list:</h2>
         <br>
+        <form action="{{route('trainee.course')}}" method = "post">
+            @csrf
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>TopicID</th>
-                    <th>Topic Name</th>
-                    <th>Trainer</th>
-                    <th>Topic Description</th>
+                    <th>CourseID</th>
+                    <th>Course Name</th>
+                    <th>Course Description</th>
+                    <th>Choose this course</th>
                 </tr>
-                @foreach($topics as $topic)
+                @foreach($courses as $course)
                     <tr class = "text-center">
-                        <td>{{ $topic->id }}</td>
-                        <td>{{ $topic->TopicName }}</td>
-                        <td>{{ $topic->TrainerName }}</td>
-                        <td>{{$topic->TopicDescription}}</td>
-                    </tr>
+                        <td>{{ $course->id }}</td>
+                        <td>{{ $course->CourseName }}</td>
+                        <td>{{ $course->CourseDescription }}</td>
+                        <td><input type="checkbox" name="course[]" value="{{$course->id}}"></td>
+                        </tr>
                 @endforeach
             </table>
-
-
         </div>
-
-                <h2>Trainee assigned to this course:</h2>
-                <br>
-                <div class="table">
-                    <table class="table table-hover table-striped table-fixed text-center">
-                        <tr>
-                            <th>TraineeID</th>
-                            <th>Trainee Name</th>
-                            <th>Trainee Phone</th>
-                            <th>Trainee Email</th>
-                        </tr>
-                        @foreach($trainees as $trainee)
-                            <tr class = "text-center">
-                                <td>{{ $trainee->id }}</td>
-                                <td>{{ $trainee->TraineeName }}</td>
-                                <td>{{ $trainee->TraineePhone }}</td>
-                                <td>{{$trainee->TraineeEmail}}</td>
-                            </tr>
-                        @endforeach
-                    </table>
-
-
-                </div>
-
+            <input type="hidden" name="id" value = "{{$traineeid}}">
+            <button type = "submit" class = "btn btn-success">Submit</button>
+        </form>
     </div>
 
 @endsection

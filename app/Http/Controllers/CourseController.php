@@ -121,7 +121,12 @@ class CourseController extends Controller
             }
         }
 
-        return view('trainingstaff.course.detail',['courses' =>$courses,'topics'=>$topics]);
+        $trainees=DB::table('enrollments')->join('trainees',function($join) use ($id) {
+                $join->on('trainees.id','=','enrollments.TraineeID')->where('enrollments.CourseID','=',$id);
+        })->get();
+
+
+        return view('trainingstaff.course.detail',['courses' =>$courses,'topics'=>$topics,'trainees'=>$trainees]);
     }
 
     public function assign($id){

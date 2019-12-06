@@ -181,6 +181,7 @@
                     <th>System Email</th>
                     <th>Action</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 @foreach($trainees as $trainee)
                     <tr class = "text-center">
@@ -189,6 +190,7 @@
                         <td>{{ $trainee->TraineeEmail }}</td>
                         <td>{{ $trainee->TraineePhone }}</td>
                         <td>{{ $trainee->SystemEmail }}</td>
+                        <td><a href="{{route('trainee.assign',['id'=>$trainee->id])}}" class = "btn btn-secondary">Assign to course</a></td>
                         <td><a href="{{route('trainee.edit',['id'=>$trainee->id])}}" class = "btn btn-info">Edit</a></td>
                         <td><a href="{{route('trainee.destroy',['id'=>$trainee->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>

@@ -94,10 +94,15 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
     Route::get('trainee','TraineeController@index')->name('trainee.index');
     Route::get('trainee/{id}/edit','TraineeController@edit')->name('trainee.edit');
     Route::get('trainee/{id}/delete','TraineeController@destroy')->name('trainee.destroy');
+    Route::get('trainee/{id}/assign','TraineeController@assign')->name('trainee.assign');
+
     Route::get('trainee/create','TraineeController@create')->name('trainee.create');
     Route::post('trainee/create','TraineeController@store')->name('trainee.store');
     Route::get('trainee/update','TraineeController@update')->name('trainee.update');
     Route::post('trainee/update','TraineeController@update')->name('trainee.update');
+
+    Route::get('trainee/course','TraineeController@course')->name('trainee.course');
+    Route::post('trainee/course','TraineeController@course')->name('trainee.course');
     Route::get('search', 'TraineeController@search');
 
     });

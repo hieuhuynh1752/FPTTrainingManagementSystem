@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Trainee;
+use App\Enrollment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,7 +18,6 @@ class TraineeController extends Controller
             foreach ($users as $user){
                 if($trainee->UserID==$user->id){
                     $trainee->SystemEmail=$user->email;
-
                 }
             }
         }
@@ -118,5 +118,28 @@ class TraineeController extends Controller
         $trainee = Trainee::findOrFail($id);
         $trainee->delete();
         return redirect()->route('trainee.index');
+    }
+
+    public function assign($id){
+        $trainee = DB::table('trainees')->where('id',$id)->first();
+        $name = $trainee->TraineeName;
+        //$courses = DB::table('enrollments')
+        //    ->join('courses',function($join) use ($id) {
+        //        $join->on('courses.id','<>','enrollments.CourseID')->where('enrollments.TraineeID','=',$id);
+        //    })->get();
+        $courses=DB::table('courses')->orderBy('id')->get();
+        return view('trainingstaff.trainee.assign',['traineeid'=>$id,'courses'=>$courses,'name'=>$name]);
+    }
+
+    public function course(Request $request){
+        $courselist = $request->course;
+        foreach ($courselist as $courseitem){
+            $assign = new Enrollment();
+            $assign->CourseID =$courseitem;
+            $assign->TraineeID = $request->input('id');
+            $assign->save();
+        }
+        //return view('trainingstaff.index');
+        return $this->index();
     }
 }
