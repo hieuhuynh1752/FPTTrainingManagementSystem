@@ -100,7 +100,18 @@ class CourseController extends Controller
                 }
             }
         }
-        $topics = DB::table('coursedetails')->where('courseid',$id)->get();
+        $topics = DB::table('course_details')->where('courseid',$id)->get();
+        $temptopics = DB::table('topics')->orderBy('id')->get();
+        foreach ($topics as $topic){
+            foreach ($temptopics as $temptopic){
+                if($topic->TopicID==$temptopic->id){
+                    $topic->TrainerID=$temptopic->TrainerID;
+                    $topic->TopicName=$temptopic->TopicName;
+                    $topic->TopicDescription=$temptopic->TopicDescription;
+                }
+            }
+        }
+
         $trainers = DB::table('trainers')->orderBy('id')->get();
         foreach ($topics as $topic){
             foreach ($trainers as $trainer){
@@ -114,18 +125,28 @@ class CourseController extends Controller
     }
 
     public function assign($id){
+        $course = DB::table('courses')->where('id',$id)->first();
+        $name = $course->CourseName;
         $topics = DB::table('topics')->orderBy('id')->get();
         $trainers = DB::table('trainers')->orderBy('id')->get();
-        return view('trainingstaff.course.assign',['courseid'=>$id,'topics'=>$topics,'trainers'=>$trainers]);
+        foreach ($topics as $topic){
+            foreach ($trainers as $trainer){
+                if($topic->TrainerID==$trainer->id){
+                    $topic->TrainerName=$trainer->TrainerName;
+                }
+            }
+        }
+        return view('trainingstaff.course.assign',['courseid'=>$id,'topics'=>$topics,'name'=>$name]);
     }
 
-    public function assigntopic(Request $request){
-        $assign = new CourseDetail();
-        $assign->CourseID =$request->input('id');
-        $assign->TopicID = $request->input('topic');
-        $assign->save();
-
-        $topics = DB::table('topics')->where('courseid','<>',$request->input('id'))->get();
-        return view('trainingstaff.course.assign',['courseid'=>$request->input('id'),'topics'=>$topics]);
+    public function topic(Request $request){
+        $topiclist = $request->topic;
+        foreach ($topiclist as $topicitem){
+            $assign = new CourseDetail();
+            $assign->CourseID =$request->input('id');
+            $assign->TopicID = $topicitem;
+            $assign->save();
+        }
+        return view('trainingstaff.index');
     }
 }

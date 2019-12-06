@@ -156,48 +156,32 @@
 @section('content')
 
     <div class="container">
+        <h2>Assign topics into {{$name}} course:</h2>
 
-        <form action="/search" method="get" role="search">
-            {{ csrf_field() }}
-            <div class="main">
-                <div class="input-group">
-                    <input type="search" class="form-control" name="search" placeholder="Search courses">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>
         <br>
+        <form action="{{route('course.topic')}}" method = "post">
+            @csrf
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
-                    <th>CourseID</th>
-                    <th>Course Name</th>
-                    <th>Course Category</th>
-                    <th></th>
-                    <th>Action</th>
-                    <th></th>
-                    <th></th>
+                    <th>TopicID</th>
+                    <th>Topic Name</th>
+                    <th>Topic Trainer</th>
+                    <th>Choose this topic</th>
                 </tr>
-                @foreach($courses as $course)
+                @foreach($topics as $topic)
                     <tr class = "text-center">
-                        <td>{{ $course->id }}</td>
-                        <td>{{ $course->CourseName }}</td>
-                        <td>{{ $course->CourseCategoryName }}</td>
-                        <td><a href="#" class = "btn btn-dark">Details</a></td>
-                        <td><a href="#" class = "btn btn-secondary">Add topics</a></td>
-                        <td><a href="{{route('course.edit',['id'=>$course->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('course.destroy',['id'=>$course->id])}}" class = "btn btn-danger">Delete</a></td>
+                        <td>{{ $topic->id }}</td>
+                        <td>{{ $topic->TopicName }}</td>
+                        <td>{{ $topic->TrainerName }}</td>
+                        <td><input type="checkbox" name="topic[]" value="{{$topic->id}}"></td>
                         </tr>
                 @endforeach
             </table>
-
-
         </div>
-
+            <input type="hidden" name="id" value = "{{$courseid}}">
+            <button type = "submit" class = "btn btn-success">Submit</button>
+        </form>
     </div>
 
 @endsection

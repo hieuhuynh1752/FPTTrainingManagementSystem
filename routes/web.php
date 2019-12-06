@@ -51,8 +51,9 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
     Route::post('course/create','CourseController@store')->name('course.store');
     Route::get('course/update','CourseController@update')->name('course.update');
     Route::post('course/update','CourseController@update')->name('course.update');
-    Route::get('course/assigntopic','CourseController@assigntopic')->name('course.assigntopic');
-    Route::post('course/assigntopic','CourseController@assigntopic')->name('course.assigntopic');
+
+    Route::get('course/topic','CourseController@topic')->name('course.topic');
+    Route::post('course/topic','CourseController@topic')->name('course.topic');
     Route::get('search', 'CourseController@search');
 
 
