@@ -14,7 +14,7 @@
 
         .sidenav {
             height: 100%;
-            width: 120px;
+            width: 180px;
             position: fixed;
             z-index: 1;
             top: 60px;
@@ -54,9 +54,9 @@
         }
 
         .main {
-            margin-left: 160px; /* Same as the width of the sidenav */
+            margin-left: 660px; /* Same as the width of the sidenav */
             font-size: 28px; /* Increased text to enable scrolling */
-            padding: 0px 10px;
+            padding-left: 30px;
         }
 
         .fa-caret-down {
@@ -71,9 +71,14 @@
             padding-left: 8px;
         }
 
+        .table{
+            width: 110%;
+            padding-right:30px;
+        }
+
         .active {
-            background-color: green;
-            color: white;
+            background-color: lightsteelblue;
+            color: darkslategray;
         }
 
         @media screen and (max-height: 450px) {

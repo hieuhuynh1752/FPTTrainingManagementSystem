@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\CourseDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -78,7 +79,6 @@ class CourseController extends Controller
                 }
             }
         }
-
         return view('trainingstaff.course.index',['courses'=>$courses]);
     }
 
@@ -87,5 +87,27 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
         $course->delete();
         return redirect()->route('course.index');
+    }
+
+
+    public function detail($id){
+        $info = DB::table('courses')->where('id',$id)->first();
+        $topics = DB::table('coursedetails')->where('courseid',$id)->get();
+        return view('trainingstaff.course.detail',['info'=>$info,'topics'=>$topics]);
+    }
+
+    public function assign($id){
+        $topics = DB::table('topics')->orderBy('id')->get();
+        return view('trainingstaff.course.assign',['courseid'=>$id,'topics'=>$topics]);
+    }
+
+    public function assigntopic(Request $request){
+        $assign = new CourseDetail();
+        $assign->CourseID =$request->input('id');
+        $assign->TopicID = $request->input('topic');
+        $assign->save();
+
+        $topics = DB::table('topics')->where('courseid','<>',$request->input('id'))->get();
+        return view('trainingstaff.course.assign',['courseid'=>$request->input('id'),'topics'=>$topics]);
     }
 }

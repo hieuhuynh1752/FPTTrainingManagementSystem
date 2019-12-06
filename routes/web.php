@@ -41,12 +41,18 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
 
     //course-routing
     Route::get('course','CourseController@index')->name('course.index');
+    //buttons
     Route::get('course/{id}/edit','CourseController@edit')->name('course.edit');
     Route::get('course/{id}/delete','CourseController@destroy')->name('course.destroy');
+    Route::get('course/{id}/detail','CourseController@detail')->name('course.detail');
+    Route::get('course/{id}/assign','CourseController@assign')->name('course.assign');
+
     Route::get('course/create','CourseController@create')->name('course.create');
     Route::post('course/create','CourseController@store')->name('course.store');
     Route::get('course/update','CourseController@update')->name('course.update');
     Route::post('course/update','CourseController@update')->name('course.update');
+    Route::get('course/assigntopic','CourseController@assigntopic')->name('course.assigntopic');
+    Route::post('course/assigntopic','CourseController@assigntopic')->name('course.assigntopic');
     Route::get('search', 'CourseController@search');
 
 
