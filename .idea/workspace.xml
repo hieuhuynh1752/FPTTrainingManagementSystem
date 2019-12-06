@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TraineeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TraineeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrainerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrainerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Trainee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Trainee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Trainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Trainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +162,7 @@
       <workItem from="1575459798550" duration="12492000" />
       <workItem from="1575473240823" duration="955000" />
       <workItem from="1575509032353" duration="23420000" />
-      <workItem from="1575543736768" duration="16207000" />
+      <workItem from="1575543736768" duration="16823000" />
     </task>
     <task id="LOCAL-00001" summary="create training staff routes (done create course)">
       <created>1575540190979</created>
@@ -204,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575544135520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="done basic training staff functions(CRUD and relational)">
+      <created>1575562060856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575562060856</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +206,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create training staff routes (done create course)" />
-    <option name="LAST_COMMIT_MESSAGE" value="create training staff routes (done create course)" />
+    <MESSAGE value="done basic training staff functions(CRUD and relational)" />
+    <option name="LAST_COMMIT_MESSAGE" value="done basic training staff functions(CRUD and relational)" />
   </component>
 </project>
