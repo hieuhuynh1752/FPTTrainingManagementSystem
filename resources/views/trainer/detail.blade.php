@@ -90,11 +90,13 @@
 <body>
 <br>
 <div class="sidenav">
-
-    <button class="btn"><a href="{{ route('trainee.index') }}">Dashboard</a>
+    <button class="btn"><a href="{{ route('trainer.index') }}">Dashboard</a>
 
     </button>
-    </div>
+    <button class="btn"><a href="{{ route('trainer.edit') }}">Update Profile</a>
+    </button>
+
+</div>
 <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -116,31 +118,33 @@
 </html>
 @endsection
 
-@section('content')
-    <div class="container">
-        <h2>Welcome {{$name}}</h2>
-        <h4>Your assigned courses:</h4>
 
+@section('content')
+
+    <div class="container">
+        <h2>Courses having "{{$topic->TopicName}}" Topic:</h2>
+        <br>
+        <br>
         <div class="table">
             <table class="table table-hover table-striped table-fixed text-center">
                 <tr>
                     <th>Course ID</th>
                     <th>Course Name</th>
-                    <th>Course description</th>
+                    <th>Course Description</th>
 
-                    <th>Action</th>
+
                 </tr>
                 @foreach($courses as $course)
                     <tr class = "text-center">
-                        <td>{{ $course->CourseID }}</td>
+                        <td>{{ $course->id }}</td>
                         <td>{{ $course->CourseName }}</td>
-                        <td>{{ $course->CourseDescription }}</td>
-                        <td><a href="{{route('course.detail',['id'=>$course->CourseID])}}" class = "btn btn-dark">Details</a></td>
+                        <td>{{$course->CourseDescription}}</td>
+
                     </tr>
                 @endforeach
             </table>
-            <h6>Press Details button to see topics within the course</h6>
+
 
         </div>
-    </div>
+
 @endsection

@@ -132,6 +132,7 @@ class CourseController extends Controller
     public function assign($id){
         $course = DB::table('courses')->where('id',$id)->first();
         $name = $course->CourseName;
+
         $topics = DB::table('course_details')
                     ->join('topics',function($join) use ($id) {
                         $join->on('topics.id','<>','course_details.TopicID')->where('course_details.CourseID','=',$id);

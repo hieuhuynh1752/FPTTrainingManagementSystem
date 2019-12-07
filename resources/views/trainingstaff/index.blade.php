@@ -156,7 +156,7 @@
 @section('content')
 
     <div class="container">
-        <h2>This is trainingstaff main index!</h2>
+        <h2>This is trainingstaff main index! {{$id}}</h2>
 
 
 @endsection

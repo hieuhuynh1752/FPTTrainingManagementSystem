@@ -112,9 +112,33 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
 //Route::post('admin/acclist/store','AdminController@store');
 //Route::get('admin/acclist/delete/{id}','AdminController@destroy');
 
-//Route::get('trainingstaff', ['middleware'=>'istrainingstaff',function () {
-//    return view('trainingstaff.index');
-//}]);
+Route::group(['middleware'=>['istrainer']], function(){
+    //Route::resource('users','AdminController');
+
+    Route::get('trainer','UserController@index')->name('trainer.index');
+    Route::get('trainer/{id}/detail','UserController@detail')->name('course.detail');
+    Route::get('trainer/edit','UserController@edit')->name('trainer.edit');
+    //Route::get('admin/{id}/delete','AdminController@destroy')->name('admin.destroy');
+    //Route::get('admin/create','AdminController@create')->name('admin.create');
+    //Route::post('admin/create','AdminController@store')->name('admin.store');
+    Route::get('trainer/update','UserController@update')->name('trainer.update');
+    Route::post('trainer/update','UserController@update')->name('trainer.update');
+    //Route::get('search', 'AdminController@search');
+});
+
+Route::group(['middleware'=>['istrainee']], function(){
+    //Route::resource('users','AdminController');
+
+    Route::get('trainee','UserController@index')->name('trainee.index');
+    Route::get('trainee/{id}/detail','UserController@detail')->name('course.detail');
+    //Route::get('trainer/edit','UserController@edit')->name('trainer.edit');
+    //Route::get('admin/{id}/delete','AdminController@destroy')->name('admin.destroy');
+    //Route::get('admin/create','AdminController@create')->name('admin.create');
+    //Route::post('admin/create','AdminController@store')->name('admin.store');
+    //Route::get('trainer/update','UserController@update')->name('trainer.update');
+    //Route::post('trainer/update','UserController@update')->name('trainer.update');
+    //Route::get('search', 'AdminController@search');
+});
 
 //Route::get('trainer', ['middleware'=>'istrainer',function () {
 //    return view('trainer.index');

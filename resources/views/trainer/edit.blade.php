@@ -90,45 +90,13 @@
 <body>
 <br>
 <div class="sidenav">
-    <button class="dropdown-btn">Course
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="{{ route('course.index') }}">Course list</a>
-        <a href="{{ url('course/create') }}">Create course</a>
-    </div>
+    <button class="btn"><a href="{{ route('trainer.index') }}">Dashboard</a>
 
-    <button class="dropdown-btn">Course Category
-        <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-container">
-        <a href="{{ route('coursecategory.index') }}">Course category list</a>
-        <a href="{{ url('coursecategory/create') }}">Create Course category</a>
-    </div>
+    <button class="btn"><a href="{{ route('trainer.edit') }}">Update Profile</a>
 
-    <button class="dropdown-btn">Topic
-        <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-container">
-        <a href="{{ route('topic.index') }}">Topic list</a>
-        <a href="{{ url('topic/create') }}">Create topic</a>
-    </div>
 
-    <button class="dropdown-btn">Trainer
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="{{ route('trainer.index') }}">Trainer list</a>
-        <a href="{{ url('trainer/create') }}">Create trainer</a>
-    </div>
-
-    <button class="dropdown-btn">Trainee
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="{{ route('trainee.index') }}">Trainee list</a>
-        <a href="{{ url('trainee/create') }}">Create trainee</a>
-    </div>
 </div>
 <script>
     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
@@ -158,15 +126,6 @@
             <form action="{{route('trainer.update')}}" method = "post">
                 @csrf
                 <div class="form-group">
-                    <label for="role">System Email:</label>
-                    <select name="user" id="user" class="form-control" required>
-                        <option value="{{$trainer->UserID}}">{{$trainer->systememail}}</option>
-                        @foreach($users as $user)
-                            <option value="{{$user->id}}">{{$user->email}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
                     <label for="name">Trainer Name:</label>
                     <input type="text" name = "name" id = "name" class="form-control" required value="{{$trainer->TrainerName}}">
                 </div>
@@ -183,6 +142,7 @@
                     <input type="text" name = "phone" id = "phone" class="form-control" required value="{{$trainer->TrainerPhone}}">
                 </div>
                 <input type="hidden" name="id" value = "{{$trainer->id}}">
+                <input type="hidden" name="user" value = "{{$trainer->UserID}}">
                 <button type = "submit" class = "btn btn-success">Submit</button>
             </form>
         </div>
