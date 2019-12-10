@@ -11,6 +11,22 @@ class AdminController extends Controller
 {
     public function index(){
         $users = User::orderBy('id')->get();
+        foreach($users as $user){
+            switch ($user->role){
+                case 1:
+                    $user->rolename = "Administrator";
+                    break;
+                case 2:
+                    $user->rolename="Training Staff";
+                    break;
+                case 3:
+                    $user->rolename="Trainer";
+                    break;
+                case 4:
+                    $user->rolename="Trainee";
+                    break;
+            }
+        }
         return view('admin.index',['users'=>$users]);
     }
 
@@ -56,8 +72,22 @@ class AdminController extends Controller
     public function search(Request $request){
         $search =$request->get('search');
         $users = DB::table('users')->where('name','like','%'.$search.'%')->get();
-
-
+        foreach($users as $user) {
+            switch ($user->role) {
+                case 1:
+                    $user->rolename = "Administrator";
+                    break;
+                case 2:
+                    $user->rolename = "Training Staff";
+                    break;
+                case 3:
+                    $user->rolename = "Trainer";
+                    break;
+                case 4:
+                    $user->rolename = "Trainee";
+                    break;
+            }
+        }
         return view('admin.index',['users'=>$users]);
     }
 

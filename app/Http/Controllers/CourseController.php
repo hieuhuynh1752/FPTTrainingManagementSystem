@@ -74,7 +74,7 @@ class CourseController extends Controller
         $categories = DB::table('course_categories')->orderBy('id')->get();
         foreach ($courses as $course){
             foreach ($categories as $category){
-                if($course->id==$category->id){
+                if($course->CourseCategoryID==$category->id){
                     $course->CourseCategoryName=$category->CourseCategoryName;
                 }
             }

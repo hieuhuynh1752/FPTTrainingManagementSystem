@@ -157,7 +157,7 @@
 
     <div class="container">
 
-        <form action="/search" method="get" role="search">
+        <form action="/search_trainer" method="get" role="search">
             {{ csrf_field() }}
             <div class="main">
                 <div class="input-group">

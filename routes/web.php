@@ -31,7 +31,7 @@ Route::group(['middleware'=>['isadmin']], function(){
     Route::post('admin/create','AdminController@store')->name('admin.store');
     Route::get('admin/update','AdminController@update')->name('admin.update');
     Route::post('admin/update','AdminController@update')->name('admin.update');
-    Route::get('search', 'AdminController@search');
+    Route::get('search_user', 'AdminController@search');
 });
 
 Route::group(['middleware'=>['istrainingstaff']], function(){
@@ -54,7 +54,7 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
 
     Route::get('course/topic','CourseController@topic')->name('course.topic');
     Route::post('course/topic','CourseController@topic')->name('course.topic');
-    Route::get('search', 'CourseController@search');
+    Route::get('search_course', 'CourseController@search');
 
 
     //coursecategory-routing
@@ -65,7 +65,7 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
     Route::post('coursecategory/create','CourseCategoryController@store')->name('coursecategory.store');
     Route::get('coursecategory/update','CourseController@update')->name('coursecategory.update');
     Route::post('coursecategory/update','CourseCategoryController@update')->name('coursecategory.update');
-    Route::get('search', 'CourseCategoryController@search');
+    Route::get('search_course_category', 'CourseCategoryController@search');
 
 
     //topic-routing
@@ -76,7 +76,7 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
     Route::post('topic/create','TopicController@store')->name('topic.store');
     Route::get('topic/update','TopicController@update')->name('topic.update');
     Route::post('topic/update','TopicController@update')->name('topic.update');
-    Route::get('search', 'TopicController@search');
+    Route::get('search_topic', 'TopicController@search');
 
 
     //trainer-routing
@@ -87,7 +87,7 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
     Route::post('trainers/create','TrainerController@store')->name('trainers.store');
     Route::get('trainers/update','TrainerController@update')->name('trainers.update');
     Route::post('trainers/update','TrainerController@update')->name('trainers.update');
-    Route::get('search', 'TrainerController@search');
+    Route::get('search_trainer', 'TrainerController@search');
 
 
     //trainee-routing
@@ -103,7 +103,7 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
 
     Route::get('trainees/course','TraineeController@course')->name('trainees.course');
     Route::post('trainees/course','TraineeController@course')->name('trainees.course');
-    Route::get('search', 'TraineeController@search');
+    Route::get('search_trainee', 'TraineeController@search');
 
     });
 

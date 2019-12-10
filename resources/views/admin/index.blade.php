@@ -119,7 +119,7 @@
 
     <div class="container">
 
-        <form action="/search" method="get" role="search">
+        <form action="/search_user" method="get" role="search">
             {{ csrf_field() }}
             <div class="main">
                 <div class="input-group">
@@ -148,7 +148,7 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->role }}</td>
+                        <td>{{ $user->rolename }}</td>
 
                         <td><a href="{{route('admin.edit',['id'=>$user->id])}}" class = "btn btn-info">Edit</a></td>
                         <td><a href="{{route('admin.destroy',['id'=>$user->id])}}" class = "btn btn-danger">Delete</a></td>

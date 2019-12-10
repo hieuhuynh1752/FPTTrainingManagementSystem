@@ -74,7 +74,7 @@ class TopicController extends Controller
         foreach ($topics as $topic){
             foreach ($trainers as $trainer){
                 if($topic->TrainerID==$trainer->id){
-                    $topic->TopicName=$trainer->TrainerName;
+                    $topic->TrainerName=$trainer->TrainerName;
                 }
             }
         }
