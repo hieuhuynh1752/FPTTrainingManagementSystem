@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TopicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,7 +174,7 @@
       <workItem from="1575700423501" duration="12158000" />
       <workItem from="1575885177178" duration="2127000" />
       <workItem from="1575947185072" duration="4739000" />
-      <workItem from="1575955281721" duration="1095000" />
+      <workItem from="1575955281721" duration="2569000" />
     </task>
     <task id="LOCAL-00001" summary="create training staff routes (done create course)">
       <created>1575540190979</created>
@@ -268,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575951306292</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix search function on Training Staff role">
+      <created>1575956421002</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1575956421002</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +295,7 @@
     <MESSAGE value="Done add topics to course" />
     <MESSAGE value="Basically done version 1.0" />
     <MESSAGE value="Fix trainer &amp; trainee display on Training Staff role" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix trainer &amp; trainee display on Training Staff role" />
+    <MESSAGE value="Fix search function on Training Staff role" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix search function on Training Staff role" />
   </component>
 </project>

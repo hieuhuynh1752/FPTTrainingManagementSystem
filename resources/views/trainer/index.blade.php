@@ -139,7 +139,7 @@
                         <td>{{ $topic->id }}</td>
                         <td>{{ $topic->TopicName }}</td>
                         <td>{{ $topic->TopicDescription }}</td>
-                        <td><a href="{{route('course.detail',['id'=>$topic->id])}}" class = "btn btn-dark">Details</a></td>
+                        <td><a href="{{route('trainer.detail',['id'=>$topic->id])}}" class = "btn btn-dark">Details</a></td>
                     </tr>
                 @endforeach
             </table>
