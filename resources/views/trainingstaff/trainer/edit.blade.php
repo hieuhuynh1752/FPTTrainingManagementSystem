@@ -155,29 +155,34 @@
 @section('content')
     <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
-            <form action="{{route('topic.update')}}" method = "post">
+            <form action="{{route('trainers.update')}}" method = "post">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Topic Name:</label>
-                    <input type="text" name = "name" id = "name" class="form-control" required value="{{$topic->TopicName}}">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Topic Description:</label>
-                    <input type="text" name = "description" id = "description" class="form-control" required value="{{$topic->description}}">
-                </div>
-                <div class="form-group">
-                    <label for="role">Trainer:</label>
-                    <select name="trainer" id="trainer" class="form-control" required>
-                        @foreach($trainers as $trainer)
-
-                            <option value="{{$trainer->id}}">{{$trainer->TrainerName}}</option>
-
+                    <label for="role">System Email:</label>
+                    <select name="user" id="user" class="form-control" required>
+                        <option value="{{$trainer->UserID}}">{{$trainer->systememail}}</option>
+                        @foreach($users as $user)
+                            <option value="{{$user->id}}">{{$user->email}}</option>
                         @endforeach
-
                     </select>
-
                 </div>
-                <input type="hidden" name="id" value = "{{$topic->id}}">
+                <div class="form-group">
+                    <label for="name">Trainer Name:</label>
+                    <input type="text" name = "name" id = "name" class="form-control" required value="{{$trainer->TrainerName}}">
+                </div>
+                <div class="form-group">
+                    <label for="name">Trainer Type:</label>
+                    <input type="text" name = "type" id = "type" class="form-control" required value="{{$trainer->TrainerType}}">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Trainer Email:</label>
+                    <input type="email" name = "email" id = "email" class="form-control" required value="{{$trainer->TrainerEmail}}">
+                </div>
+                <div class="form-group">
+                    <label for="name">Trainer Phone:</label>
+                    <input type="text" name = "phone" id = "phone" class="form-control" required value="{{$trainer->TrainerPhone}}">
+                </div>
+                <input type="hidden" name="id" value = "{{$trainer->id}}">
                 <button type = "submit" class = "btn btn-success">Submit</button>
             </form>
         </div>

@@ -119,16 +119,16 @@
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-        <a href="{{ route('trainer.index') }}">Trainer list</a>
-        <a href="{{ url('trainer/create') }}">Create trainer</a>
+        <a href="{{ route('trainers.index') }}">Trainer list</a>
+        <a href="{{ url('trainers/create') }}">Create trainer</a>
     </div>
 
     <button class="dropdown-btn">Trainee
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-        <a href="{{ route('trainee.index') }}">Trainee list</a>
-        <a href="{{ url('trainee/create') }}">Create trainee</a>
+        <a href="{{ route('trainees.index') }}">Trainee list</a>
+        <a href="{{ url('trainees/create') }}">Create trainee</a>
     </div>
 </div>
 <script>
@@ -190,9 +190,9 @@
                         <td>{{ $trainee->TraineeEmail }}</td>
                         <td>{{ $trainee->TraineePhone }}</td>
                         <td>{{ $trainee->SystemEmail }}</td>
-                        <td><a href="{{route('trainee.assign',['id'=>$trainee->id])}}" class = "btn btn-secondary">Assign to course</a></td>
-                        <td><a href="{{route('trainee.edit',['id'=>$trainee->id])}}" class = "btn btn-info">Edit</a></td>
-                        <td><a href="{{route('trainee.destroy',['id'=>$trainee->id])}}" class = "btn btn-danger">Delete</a></td>
+                        <td><a href="{{route('trainees.assign',['id'=>$trainee->id])}}" class = "btn btn-secondary">Assign to course</a></td>
+                        <td><a href="{{route('trainees.edit',['id'=>$trainee->id])}}" class = "btn btn-info">Edit</a></td>
+                        <td><a href="{{route('trainees.destroy',['id'=>$trainee->id])}}" class = "btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </table>

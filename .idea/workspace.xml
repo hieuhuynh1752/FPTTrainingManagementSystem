@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/trainee/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/trainer/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TrainingStaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrainingStaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainee/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/assign.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/assign.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/coursecategory/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainer/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/topic/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/assign.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/assign.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainee/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainingstaff/trainer/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,7 +135,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/trainee" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/trainingstaff/trainer" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -134,11 +144,11 @@
       <recent name="E:\testauth\testAuth\public\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\testauth\testAuth\resources\views\trainingstaff\trainer" />
       <recent name="E:\testauth\testAuth\resources\views\trainee" />
       <recent name="E:\testauth\testAuth\resources\views\trainer" />
       <recent name="E:\testauth\testAuth\app\Http\Controllers" />
       <recent name="E:\testauth\testAuth\resources\views\trainingstaff\trainee" />
-      <recent name="E:\testauth\testAuth\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -179,7 +189,9 @@
       <workItem from="1575594499657" duration="30913000" />
       <workItem from="1575630385457" duration="10291000" />
       <workItem from="1575688231272" duration="5631000" />
-      <workItem from="1575700423501" duration="11828000" />
+      <workItem from="1575700423501" duration="12158000" />
+      <workItem from="1575885177178" duration="2127000" />
+      <workItem from="1575947185072" duration="4053000" />
     </task>
     <task id="LOCAL-00001" summary="create training staff routes (done create course)">
       <created>1575540190979</created>
@@ -251,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575636755284</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Basically done version 1.0">
+      <created>1575712613997</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575712613998</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +296,7 @@
     <MESSAGE value="Done course details" />
     <MESSAGE value="Temporary done add topics to course" />
     <MESSAGE value="Done add topics to course" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done add topics to course" />
+    <MESSAGE value="Basically done version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basically done version 1.0" />
   </component>
 </project>

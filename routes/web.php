@@ -80,29 +80,29 @@ Route::group(['middleware'=>['istrainingstaff']], function(){
 
 
     //trainer-routing
-    Route::get('trainer','TrainerController@index')->name('trainer.index');
-    Route::get('trainer/{id}/edit','TrainerController@edit')->name('trainer.edit');
-    Route::get('trainer/{id}/delete','TrainerController@destroy')->name('trainer.destroy');
-    Route::get('trainer/create','TrainerController@create')->name('trainer.create');
-    Route::post('trainer/create','TrainerController@store')->name('trainer.store');
-    Route::get('trainer/update','TrainerController@update')->name('trainer.update');
-    Route::post('trainer/update','TrainerController@update')->name('trainer.update');
+    Route::get('trainers','TrainerController@index')->name('trainers.index');
+    Route::get('trainers/{id}/edit','TrainerController@edit')->name('trainers.edit');
+    Route::get('trainers/{id}/delete','TrainerController@destroy')->name('trainers.destroy');
+    Route::get('trainers/create','TrainerController@create')->name('trainers.create');
+    Route::post('trainers/create','TrainerController@store')->name('trainers.store');
+    Route::get('trainers/update','TrainerController@update')->name('trainers.update');
+    Route::post('trainers/update','TrainerController@update')->name('trainers.update');
     Route::get('search', 'TrainerController@search');
 
 
     //trainee-routing
-    Route::get('trainee','TraineeController@index')->name('trainee.index');
-    Route::get('trainee/{id}/edit','TraineeController@edit')->name('trainee.edit');
-    Route::get('trainee/{id}/delete','TraineeController@destroy')->name('trainee.destroy');
-    Route::get('trainee/{id}/assign','TraineeController@assign')->name('trainee.assign');
+    Route::get('trainees','TraineeController@index')->name('trainees.index');
+    Route::get('trainees/{id}/edit','TraineeController@edit')->name('trainees.edit');
+    Route::get('trainees/{id}/delete','TraineeController@destroy')->name('trainees.destroy');
+    Route::get('trainees/{id}/assign','TraineeController@assign')->name('trainees.assign');
 
-    Route::get('trainee/create','TraineeController@create')->name('trainee.create');
-    Route::post('trainee/create','TraineeController@store')->name('trainee.store');
-    Route::get('trainee/update','TraineeController@update')->name('trainee.update');
-    Route::post('trainee/update','TraineeController@update')->name('trainee.update');
+    Route::get('trainees/create','TraineeController@create')->name('trainees.create');
+    Route::post('trainees/create','TraineeController@store')->name('trainees.store');
+    Route::get('trainees/update','TraineeController@update')->name('trainees.update');
+    Route::post('trainees/update','TraineeController@update')->name('trainees.update');
 
-    Route::get('trainee/course','TraineeController@course')->name('trainee.course');
-    Route::post('trainee/course','TraineeController@course')->name('trainee.course');
+    Route::get('trainees/course','TraineeController@course')->name('trainees.course');
+    Route::post('trainees/course','TraineeController@course')->name('trainees.course');
     Route::get('search', 'TraineeController@search');
 
     });
@@ -116,7 +116,7 @@ Route::group(['middleware'=>['istrainer']], function(){
     //Route::resource('users','AdminController');
 
     Route::get('trainer','UserController@index')->name('trainer.index');
-    Route::get('trainer/{id}/detail','UserController@detail')->name('course.detail');
+    Route::get('trainer/{id}/detail','UserController@detail')->name('trainer.detail');
     Route::get('trainer/edit','UserController@edit')->name('trainer.edit');
     //Route::get('admin/{id}/delete','AdminController@destroy')->name('admin.destroy');
     //Route::get('admin/create','AdminController@create')->name('admin.create');
