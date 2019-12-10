@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a0d69d5-f289-41ef-b9e5-356005224943" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/trainee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/trainee/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -174,7 +174,7 @@
       <workItem from="1575700423501" duration="12158000" />
       <workItem from="1575885177178" duration="2127000" />
       <workItem from="1575947185072" duration="4739000" />
-      <workItem from="1575955281721" duration="2569000" />
+      <workItem from="1575955281721" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="create training staff routes (done create course)">
       <created>1575540190979</created>
@@ -267,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575956421002</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fix search function on Training Staff role">
+      <created>1575964250612</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1575964250612</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

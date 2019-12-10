@@ -129,7 +129,7 @@ Route::group(['middleware' => ['istrainee']], function () {
     //Route::resource('users','AdminController');
 
     Route::get('trainee', 'UserController@index')->name('trainee.index');
-    Route::get('trainee/{id}/detail', 'UserController@detail')->name('course.detail');
+    Route::get('trainee/{id}/detail', 'UserController@detail')->name('trainee.detail');
     //Route::get('trainer/edit','UserController@edit')->name('trainer.edit');
     //Route::get('admin/{id}/delete','AdminController@destroy')->name('admin.destroy');
     //Route::get('admin/create','AdminController@create')->name('admin.create');

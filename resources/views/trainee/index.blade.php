@@ -135,7 +135,7 @@
                         <td>{{ $course->CourseID }}</td>
                         <td>{{ $course->CourseName }}</td>
                         <td>{{ $course->CourseDescription }}</td>
-                        <td><a href="{{route('course.detail',['id'=>$course->CourseID])}}" class = "btn btn-dark">Details</a></td>
+                        <td><a href="{{route('trainee.detail',['id'=>$course->CourseID])}}" class = "btn btn-dark">Details</a></td>
                     </tr>
                 @endforeach
             </table>
